@@ -8,7 +8,7 @@ public struct TDThemePickerView: View {
 
     // MARK: - Property Wrappers
 
-    @Binding var selectedTheme: TDThemePickerModel
+    @Binding public var selectedTheme: TDThemePickerModel
 
     @Namespace var animation
 
