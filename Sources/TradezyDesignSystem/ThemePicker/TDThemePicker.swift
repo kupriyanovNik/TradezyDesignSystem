@@ -8,7 +8,7 @@ public struct TDThemePickerView: View {
 
     // MARK: - Property Wrappers
 
-    @Binding var selectedTheme: ThemePickerModel
+    @Binding var selectedTheme: TDThemePickerModel
 
     @Namespace var animation
 
@@ -26,7 +26,7 @@ public struct TDThemePickerView: View {
 
     // MARK: - Body
 
-    var body: some View {
+    public var body: some View {
         VStack(spacing: 15) {
             Circle()
                 .fill(selectedTheme.color(colorScheme).gradient)
@@ -46,7 +46,7 @@ public struct TDThemePickerView: View {
                 .padding(.top, 25)
 
             HStack(spacing: 0) {
-                ForEach(ThemePickerModel.allCases, id: \.hashValue) { theme in
+                ForEach(TDThemePickerModel.allCases, id: \.hashValue) { theme in
                     Text(theme.rawValue)
                         .padding(.vertical)
                         .frame(width: 100)
