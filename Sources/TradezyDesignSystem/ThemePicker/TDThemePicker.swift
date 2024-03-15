@@ -10,7 +10,7 @@ public struct TDThemePickerView: View {
 
     @Binding public var selectedTheme: TDThemePickerModel
 
-    @Namespace var animation
+    @Namespace private var animation
 
     @State private var circleOffset: CGSize = .zero
 
@@ -22,6 +22,13 @@ public struct TDThemePickerView: View {
 
     private var themeBG: Color {
         colorScheme == .dark ? .darkThemeBG : .lightThemeBG
+    }
+
+    // MARK: - Inits
+
+    public init(selectedTheme: Binding<TDThemePickerModel>, colorScheme: ColorScheme) {
+        self._selectedTheme = selectedTheme
+        self.colorScheme = colorScheme
     }
 
     // MARK: - Body
