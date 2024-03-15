@@ -9,7 +9,7 @@ public enum TDThemePickerModel: String, CaseIterable {
     case light = "Светлая"
     case dark = "Темная"
 
-    var colorScheme: ColorScheme? {
+    public var colorScheme: ColorScheme? {
         switch self {
         case .system: nil
         case .light: .light
@@ -17,7 +17,7 @@ public enum TDThemePickerModel: String, CaseIterable {
         }
     }
 
-    func color(_ scheme: ColorScheme) -> Color {
+    public func color(_ scheme: ColorScheme) -> Color {
         switch self {
         case .system: scheme == .dark ? .moon : .sun
         case .light: .sun
