@@ -16,7 +16,7 @@ public struct TDThemePickerView: View {
 
     // MARK: - Internal Properties
 
-    var colorScheme: ColorScheme
+    public var colorScheme: ColorScheme
 
     // MARK: - Private Properties
 
